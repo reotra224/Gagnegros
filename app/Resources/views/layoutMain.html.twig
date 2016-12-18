@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>{% block title %} {% endblock %}</title>
+          {% stylesheets filter='cssrewrite' '@GagneGrosBundle/Resources/public/css/style.css' %}
+            <link rel="stylesheet" href="{{ asset_url }}" type="text/css" media="all" />
+          {% endstylesheets %}
+    </head>
+    <body>
+      <div class="contenu">
+        <header>
+          <div id="logo">
+            {% image '@GagneGrosBundle/Resources/public/images/Qt.jpg' %}
+              <a href="{{ path('gagnegros_accueil') }}"><img src= " {{ asset_url }} " alt= "Logo" /></a>
+            {% endimage %}
+          </div>
+          <h1 id="titre_principal"> GAGNE GROS </h1>
+        </header>
+
+        <nav id="menu">
+          <ul>
+            <li id="li_accueil"><a href="{{ path('gagnegros_accueil') }}">Accueil</a></li>
+            <li id="li_paris"><a href="#">Paris sportif</a>
+              <ul>
+                <li><a href="{{ path('paris_normal') }}">Normal</a></li>
+                <li><a href="{{ path('paris_mitemp') }}">Mi-temps</a></li>
+                <li><a href="{{ path('paris_scorefinal') }}">Score final</a></li>
+              </ul>
+            </li>
+            <li id="li_hasard"><a href="#">Jeux de hasard</a>
+              <ul>
+                <li>Tirage
+                  <ul>
+                    <li><a href="{{ path('hasard_normal') }}">Normal</a></li>
+                    <li><a href="{{ path('hasard_pognon') }}">Pognon</a></li>
+                    <li><a href="{{ path('hasard_bigmoney') }}">Big Money</a></li>
+                  </ul>
+                </li>
+                <li>Grattage
+                  <ul>
+                    <li><a href="{{ path('hasard_floush') }}">Floush</a></li>
+                    <li><a href="{{ path('hasard_surprise') }}">Surprise</a></li>
+                    <li><a href="{{ path('hasard_identique') }}">Identique</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
+
+          <div class="aside" id="acces_rapide">
+            <h1>Accès Rapide</h1>
+            <div class="aside_contenu">
+              <ul>
+                <li><a href="#">Score Final</a></li>
+                <li><a href="#">Mi-Temps</a></li>
+                <li><a href="#">Pile ou Face</a></li>
+                <li><a href="#">Machine à sous</a></li>
+                <li><a href="#">Pogon</a></li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="article">
+            {% block body %}  {% endblock %}
+          </div>
+
+          <div class="aside_rigth">
+            {% block aside %}  {% endblock %}
+          </div>
+
+        </div>
+
+      {% block javascripts %}
+
+      {% endblock %}
+    </body>
+</html>

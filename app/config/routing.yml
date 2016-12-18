@@ -1,0 +1,3 @@
+gagne_gros:
+    resource: "@GagneGrosBundle/Resources/config/routing.yml"
+    prefix:   /gagnegros

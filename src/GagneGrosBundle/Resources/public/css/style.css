@@ -1,0 +1,134 @@
+body{
+  width: 1000px;
+  margin: auto;
+  font-family: sans-serif;
+  background-color: #E1E6FA;
+}
+#titre_principal{
+  color: blue;
+  font-size: 5.1em;
+  display: inline-block;
+  vertical-align: top;
+  text-indent: 50px;
+}
+#logo{
+  margin-top: 20px;
+  display: inline-block;
+  vertical-align: top;
+}
+/*******************MENU DEROULANT******************/
+nav ul {
+  margin:0;
+  padding:0;
+  list-style-type:none;
+  text-align:center;
+  background-color: gray;
+}
+nav{
+  font-weight: bold;
+  font-size: 15px;
+  margin-bottom: 15px;
+  margin-top: -40px;
+}
+nav ul li {
+  display: inline-block;
+  width: 150px;
+  margin: auto;
+  padding: 5px;
+  color: white;
+}
+nav li a{
+  text-decoration: none;
+  color: white;
+}
+nav ul li ul {
+  display: none;
+  position: absolute;
+}
+nav ul li:hover ul {
+    display: block;
+}
+nav li:hover ul li {
+
+}
+nav li a:hover {
+color: #FFD700;
+}
+
+/***********************FIN MENU DEROULANT********************/
+
+.aside{
+  display: inline-block;
+  vertical-align: top;
+  width: 200px;
+  border-radius: 3px;
+  box-shadow: 0 2px 6px -2px white;
+  margin: 0 0 10px 0;
+  padding: 5px;
+  background-color: #C4D7ED;
+}
+.aside_paris {
+  width: 150px;
+}
+.aside_paris p {
+  font-size: 12px;
+  margin-top: -5px;
+}
+.match {
+  text-align: center;
+  font-weight: bold;
+}
+.aside_paris span {
+  text-decoration: underline;
+  margin-right: 5px;
+}
+.aside_paris em {
+  font-weight: bold;
+}
+.aside h1 {
+  text-align: center;
+  border-bottom: 1px dashed #CCC;
+  font-size: 18px;
+  color: blue;
+  padding-bottom: 5px;
+}
+#titreParis {
+  padding-bottom: 1px;
+  font-size: 15px;
+  color: red;
+}
+.article{
+  display: inline-block;
+  width: 550px;
+  border-radius: 3px;
+  box-shadow: 0 2px 6px -2px white;
+  padding: 5px;
+  background-color: #C4D7ED;
+}
+.aside_rigth {
+  display: inline-block;
+  vertical-align: top;
+  width: 200px;
+}
+.article h1 {
+  text-align: center;
+  border-bottom: 1px dashed #CCC;
+  font-size: 18px;
+  color: blue;
+  padding-bottom: 5px;
+}
+table th td {
+  color: #555;
+}
+#cote {
+  text-decoration: none;
+  color: white;
+  background-color: #708090;
+  padding: 3px;
+  border-radius: 3px;
+  box-shadow: 0 2px 6px -2px gray;
+}
+#cote:hover {
+  color: white;
+  background-color: #4682B4;
+}

@@ -1,0 +1,43 @@
+{# src/GagneGrosBundle/Resources/views/GG_Views/index.html.twig #}
+
+{% extends "GagneGrosBundle::layout.html.twig" %}
+
+{% block title %} {{ parent() }} - Accueil {% endblock %}
+
+{% block body %}
+  <h1>RESULTATS DES MATCHS</h1>
+  {% if liste_matchs is defined %}
+    <table width="550px" cellpadding="5">
+      <tr>
+        <th width="300px">Nom des équipes</th>
+        <th colspan="2">Score Mi-temps</th>
+        <th colspan="2">Score final</th>
+      </tr>
+        {% for match in liste_matchs %}
+        <tr>
+          <td>{{match.equipe1}} --> {{match.equipe2}}</td>
+          <td align="center">{{ match.scoreMatchs.butMitemp1 }}</td>
+          <td align="center">{{match.scoreMatchs.butMitemp2}}</td>
+          <td align="center">{{match.scoreMatchs.butFinal1}}</td>
+          <td align="center">{{match.scoreMatchs.butFinal2}}</td>
+        </tr>
+        {% endfor %}
+    </table>
+  {% else %}
+    <p style="text-align:center;"> Aucun Match terminé pour l'instant ! </p>
+  {% endif %}
+{% endblock %}
+
+{% block aside_enfant %}
+<div class="aside">
+  <h1>Connexion</h1>
+  <div class="aside_contenu">
+    <form action="#" method="post">
+      <input type="text" name="id_connect" placeholder="Identifiant" />
+      <br><input type="password" name="pass_connect" placeholder="Mot de Passe" />
+      <br><input type="submit" value="Connecter">
+    </form>
+    <p><a href="#">Identifiant/Mot de passe perdu ?</a></p>
+  </div>
+</div>
+{% endblock %}

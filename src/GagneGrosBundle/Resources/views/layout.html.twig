@@ -1,0 +1,23 @@
+{# src/GagneGrosBundle/Resources/views/layout.html.twig #}
+
+{% extends "::layoutMain.html.twig" %}
+
+{% block title %} Gagne-Gros {% endblock %}
+
+{% block body %} {% endblock %}
+
+{% block aside %}
+  {% block aside_enfant %} {% endblock %}
+
+  <div class="aside" id="extras">
+    <h1>EXTRAS</h1>
+    <div class="aside_contenu">
+      <ul>
+        <li><a href="#">Règles Paris Sportif</a></li>
+        <li><a href="#">Conseil pratiques</a></li>
+        <li><a href="#">Divers</a></li>
+      </ul>
+    </div>
+  </div>
+{% endblock %}
+{% block javascripts %}  {% endblock %}

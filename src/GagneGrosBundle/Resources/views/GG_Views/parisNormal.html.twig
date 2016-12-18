@@ -1,0 +1,55 @@
+{# src/GagneGrosBundle/Resources/views/GG_Views/parisNormal.html.twig #}
+
+{% extends "GagneGrosBundle::layout.html.twig" %}
+
+{% block title %} {{ parent() }} | Paris Normal {% endblock %}
+
+{% block body %}
+  <h1>PARIS NORMAL</h1>
+  {% if liste_matchs is defined %}
+    <table width="550px" cellpadding="5">
+      <tr>
+        <th width="250px">Nom des équipes</th>
+        <th>Equipe 1</th>
+        <th>Match Nul</th>
+        <th>Equipe 2</th>
+      </tr>
+      {% for match in liste_matchs %}
+        <tr>
+          <td>{{match.equipe1}} --> {{match.equipe2}}</td>
+          <td align="center">
+            <a href="#" class = "{{ match.id ~ ';' ~ match.equipe1|title ~ ';' ~ match.equipe2|title ~ ';' ~ match.equipe1|title ~ ';' ~ match.cotesMatchs.coteEquipe1 }}"
+                id="cote">
+              {{ match.cotesMatchs.coteEquipe1 }}
+            </a>
+          </td>
+          <td align="center">
+            <a href="#" class="{{ match.id ~ ';' ~ match.equipe1|title ~ ';' ~ match.equipe2|title ~ ';' ~ 'NULL' ~ ';' ~ match.cotesMatchs.coteNull }}"
+                id="cote">
+              {{ match.cotesMatchs.coteNull }}
+            </a>
+          </td>
+          <td align="center">
+            <a href="#" class="{{ match.id ~ ';' ~ match.equipe1|title ~ ";" ~ match.equipe2|title ~ ";" ~ match.equipe2|title ~ ";" ~ match.cotesMatchs.coteEquipe2 }}"
+                id="cote">
+              {{ match.cotesMatchs.coteEquipe2 }}
+            </a>
+          </td>
+        </tr>
+      {% endfor %}
+    </table>
+  {% else %}
+    <p style="text-align:center;"> Aucun Match en cour pour l'instant ! </p>
+  {% endif %}
+
+{% endblock %}
+
+{% block aside_enfant %}
+<div id="aside_paris_normal"></div>
+{% endblock %}
+
+{% block javascripts %}
+  {% javascripts '@GagneGrosBundle/Resources/public/js/paris.js' %}
+    <script type="text/javascript" src="{{ asset_url }}"></script>
+  {% endjavascripts %}
+{% endblock %}

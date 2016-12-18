@@ -1,0 +1,30 @@
+gagnegros_accueil:
+    path:     /
+    defaults: { _controller: GagneGrosBundle:GagneGros:index }
+paris_normal:
+    path:     /paris/normal
+    defaults: { _controller: GagneGrosBundle:GagneGros:parisNormal }
+paris_mitemp:
+    path:     /paris/mitemp
+    defaults: { _controller: GagneGrosBundle:GagneGros:parisMitemp }
+paris_scorefinal:
+    path:     /paris/score
+    defaults: { _controller: GagneGrosBundle:GagneGros:parisScore }
+hasard_normal:
+    path:     /hasard/normal
+    defaults: { _controller: GagneGrosBundle:GagneGros:hasardNormal }
+hasard_pognon:
+    path:     /hasard/pognon
+    defaults: { _controller: GagneGrosBundle:GagneGros:hasardPognon }
+hasard_bigmoney:
+    path:     /hasard/bigmoney
+    defaults: { _controller: GagneGrosBundle:GagneGros:hasardBigmoney }
+hasard_floush:
+    path:     /hasard/floush
+    defaults: { _controller: GagneGrosBundle;GagneGros:hasardFloush }
+hasard_surprise:
+    path:     /hasard/surprise
+    defaults: { _controller: GagneGrosBundle;GagneGros:hasardSurprise }
+hasard_identique:
+    path:     /hasard/identique
+    defaults: { _controller: GagneGrosBundle;GagneGros:hasardIdentique }

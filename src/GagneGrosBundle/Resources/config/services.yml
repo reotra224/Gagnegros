@@ -1,0 +1,4 @@
+services:
+#    gagne_gros.example:
+#        class: GagneGrosBundle\Example
+#        arguments: [@service_id, "plain_value", %parameter%]
